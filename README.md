@@ -17,10 +17,8 @@ Este projeto foi desenvolvido como estudo prático de Programação Orientada a 
 
 ## Pré-requisitos
 
-Antes de executar o projeto, verifique se os itens abaixo estão instalados no ambiente:
-
 - JDK 17 ou superior
-- Maven 3.8+
+- Maven 3.8 ou superior
 - Git
 
 ## Como baixar e executar
@@ -59,19 +57,24 @@ pom.xml
 ## Conceitos de POO implementados
 
 ### 1. Polimorfismo
-A classe `Pessoa` representa o tipo genérico e as subclasses `Morador` e `Funcionario` sobrescrevem o método `exibirDetalhes()`. Isso permite que o mesmo código trate diferentes tipos de pessoa de forma integrada.
+
+A classe `Pessoa` representa o tipo genérico e as subclasses `Morador` e `Funcionario` sobrescrevem o método `exibirDetalhes()`. Assim, o mesmo código pode tratar diferentes tipos de pessoa de forma integrada.
 
 ### 2. Interfaces
+
 A interface `Notificavel` define o método `enviarNotificacao(String mensagem)`, implementado por `Morador` e `Funcionario`.
 
 ### 3. Exceções
+
 A classe `ServicoCobranca` valida valores e lança `IllegalArgumentException` quando o valor da cobrança é inválido.
 
-### 4. Collections
+### 4. Coleções
+
 A classe `ServicoMorador` usa `List` e `ArrayList` para registrar e listar moradores.
 
-### 5. JPA / Entidades mapeadas
-As entidades `Pessoa`, `Morador`, `Funcionario` e `Cobranca` estão mapeadas com JPA. A herança de `Pessoa` utiliza `@Inheritance(strategy = InheritanceType.JOINED)`, conforme a exigência do projeto.
+### 5. JPA e entidades mapeadas
+
+As entidades `Pessoa`, `Morador`, `Funcionario` e `Cobranca` estão mapeadas com JPA. A herança de `Pessoa` utiliza `@Inheritance(strategy = InheritanceType.JOINED)`.
 
 ## Principais classes
 
@@ -80,18 +83,18 @@ As entidades `Pessoa`, `Morador`, `Funcionario` e `Cobranca` estão mapeadas com
 - `Funcionario`: especialização de pessoa, com cargo e salário.
 - `Cobranca`: entidade que representa uma cobrança do condomínio.
 - `ServicoPessoa`: demonstra o uso de polimorfismo com referências de tipo `Pessoa`.
-- `ServicoMorador`: gerencia lista de moradores em coleções.
+- `ServicoMorador`: gerencia uma lista de moradores em coleções.
 - `ServicoCobranca`: valida valores de cobrança e trata erros.
 - `JpaUtil`: inicializa o `EntityManagerFactory` do JPA.
 - `SistemaCondominio`: exemplo de execução do sistema.
 
 ## Configuração do banco de dados
 
-O projeto usa H2 em memória para facilitar a execução e os testes. A configuração está em `src/main/resources/META-INF/persistence.xml`.
+O projeto usa H2 em memória para facilitar a execução e os testes. A configuração está em `src/main/resources/META-INF/persistence.xml`. O banco é recriado ao iniciar a aplicação, portanto os dados não são persistidos entre execuções.
 
 ## Exemplos de execução
 
-Ao executar a classe `SistemaCondominio`, o programa realiza:
+Ao executar a classe `SistemaCondominio`, o programa demonstra:
 
 - cadastro de moradores e funcionários;
 - exibição de detalhes com polimorfismo;
@@ -99,11 +102,14 @@ Ao executar a classe `SistemaCondominio`, o programa realiza:
 - criação de cobrança com validação;
 - persistência em banco H2 em memória.
 
+## Integrante
+
+- GustavoAUgustt (identificação utilizada no GitHub)
+
+## Escopo do projeto
+
+A configuração atual é voltada a estudos e testes locais. Banco de dados e credenciais para produção não fazem parte do escopo desta versão.
+
 ## Referência bibliográfica
 
 Este projeto foi desenvolvido como aplicação prática dos conceitos de Programação Orientada a Objetos, especialmente herança, encapsulamento, polimorfismo, interfaces, coleções e persistência de dados em JPA.
-
-## Pendências
-
-- O projeto não possui informações de integrantes no repositório, então não foram adicionados nomes de autores.
-- A configuração de banco para produção não foi aplicada, pois o uso atual é orientado para estudos e testes locais.
