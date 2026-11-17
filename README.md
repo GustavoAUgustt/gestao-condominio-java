@@ -104,7 +104,7 @@ Ao executar a classe `SistemaCondominio`, o programa demonstra:
 
 ## Integrante
 
-- GustavoAUgustt (identificação utilizada no GitHub)
+-Gustavo Augusto Leite - GustavoAUgustt (identificação utilizada no GitHub)
 
 ## Escopo do projeto
 
